@@ -1,4 +1,3 @@
-const tailwindcss = require('tailwindcss');
 module.exports = {
   "stories": [
     "../src/**/*.stories.mdx",
@@ -9,9 +8,6 @@ module.exports = {
     "@storybook/addon-essentials",
     'storybook-css-modules-preset'
   ],
-  "styles": [
-    "src/base.css"
-  ]
   /*
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
