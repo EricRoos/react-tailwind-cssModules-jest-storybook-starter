@@ -1,7 +1,7 @@
 import React from 'react';
 
-import styles from './styles.scss';
-
+import './base.css';
+import styles from './styles.module.css'
 export const TestComponent = (props) => {
   return (
     <p className={styles.test}>Hello {`${props.msg}`}</p>
