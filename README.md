@@ -6,6 +6,7 @@ Based off of: rollup-starter-lib (https://github.com/rollup/rollup-starter-lib)
 1. Clone project
 2. yarn storybook
 3. develop
+4. yarn build
 
 ## Notes
 
