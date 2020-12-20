@@ -14,15 +14,18 @@
     "@storybook/addon-actions": "^6.1.11",
     "@storybook/addon-essentials": "^6.1.11",
     "@storybook/addon-links": "^6.1.11",
-    "@storybook/react": "^6.0.7",
     "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^6.0.7",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "autoprefixer": "^9",
+    "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
+    "jest": "^26.6.3",
     "mini-css-extract-plugin": "^1.3.3",
     "node-sass": "^5.0.0",
     "postcss": "^8",
+    "react-test-renderer": "^17.0.1",
     "rollup": "^1.0.0",
     "rollup-plugin-babel": "^4.2.0",
     "rollup-plugin-commonjs": "^9.2.0",
@@ -32,7 +35,9 @@
     "sass-loader": "^10.1.0",
     "storybook-css-modules-preset": "^1.0.5",
     "style-loader": "^2.0.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "peerDependencies": {
     "react": "^17.0.1",
@@ -41,12 +46,15 @@
   "scripts": {
     "build": "PURGE=1 rollup -c",
     "dev": "rollup -c -w",
-    "test": "node test/test.js",
-    "pretest": "npm run build",
+    "test": "jest --testPathPattern=src/",
+    "updateSnapshots": "jest --testPathPattern=src/ --updateSnapshot",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "files": [
     "dist"
-  ]
+  ],
+  "jest": {
+    "moduleNameMapper": { "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js" }
+  }
 }
