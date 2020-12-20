@@ -1,0 +1,31 @@
+{
+  "name": "rollupdemo",
+  "version": "1.0.0",
+  "main": "dist/main.esm.js",
+  "module": "dist/main.esm.js",
+  "browser": "dist/how-long-till-lunch.umd.js",
+  "dependencies": {
+    "ms": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-react-jsx": "^7.12.11",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.12.10",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "rollup": "^1.0.0",
+    "rollup-plugin-babel": "^4.2.0",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "node test/test.js",
+    "pretest": "npm run build"
+  },
+  "files": [
+    "dist"
+  ]
+}
