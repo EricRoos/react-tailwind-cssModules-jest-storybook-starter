@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TestComponent  } from './main';
+import TestComponent from './index';
 
 export default {
   title: 'Main/TestComponent',
