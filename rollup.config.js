@@ -2,6 +2,8 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import pkg from './package.json';
+import postcss from 'rollup-plugin-postcss';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 export default [
 	// browser-friendly UMD build
@@ -35,6 +37,12 @@ export default [
 			{ file: pkg.module, format: 'es' }
 		],
 		plugins: [
+      peerDepsExternal(),
+      postcss({
+        extract: false,
+        modules: true,
+        use: ['sass'],
+      }),
 			babel({
 				exclude: ['node_modules/**']
 			}),
