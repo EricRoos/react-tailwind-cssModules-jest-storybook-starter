@@ -1,9 +1,8 @@
 {
-  "name": "rollupdemo",
+  "name": "react-tailwind-cssModules-jest-storybook",
   "version": "1.0.0",
   "main": "dist/main.esm.js",
   "module": "dist/main.esm.js",
-  "browser": "dist/how-long-till-lunch.umd.js",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.2.2",
